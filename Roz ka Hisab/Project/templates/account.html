@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account|{{member.name}}</title>
+    <link rel="stylesheet" href="{% static 'Account.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <div class="t1">Roz Ka Hisab — Family Expense Tracker</div>
+            <ul>
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'about' %}">About</a>
+                <a href="{% url 'dashboard' %}">Dashboard</a>
+
+               
+            </ul>
+        </div>
+
+        <div class="main">
+
+
+            <div class="c2">
+                <div class="t2">Quick Summary|{{details.member.name}}</div>
+                    <div class="top">
+                        <div class="t3">Total this Month:</div>
+                        <div class="d1">
+                            <div>
+                                <label class="l1">Amount(₹)</label>
+                                {{sum1}}
+                            </div>
+                        </div>
+
+                        <div class="d2">
+                            <div>
+                                <label class="l1">Entries</label>
+                                <div class="pm2">
+                                {% for i in details %}
+                                <div class="c5">
+                                    <div class="card">
+                                        <div class="cp1">
+                                            <div class="p1">{{i.date}} {{i.time}} • {{i.category}}</div>
+                                            <div class="p2">₹{{i.amount}}</div>
+                                        </div>
+
+                                        <div class="cp2">
+                                            <div class="p3">{{i.note}}</div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                                </div>
+                            </div>
+                            
+                        </div>
+                <div class="bottom"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

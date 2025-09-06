@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Roz Ka Hisab</title>
+  <link rel="stylesheet" href="{% static 'dashboard.css' %}">
+</head>
+<body>
+
+  <header>
+    <h1>Roz Ka Hisab</h1>
+    <nav>
+      <a href="{% url 'home' %}">Home</a>
+      <a href="{% url 'about' %}">About</a>
+      <a href="{% url 'dashboard' %}">Dashboard</a>
+    </nav>
+    <div style="clear:both;"></div>
+  </header>
+
+  <div class="container">
+    <h2>Family Expense Dashboard</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>No.</th>
+
+          <th>Member</th>
+          <th>Total Amount Spent (₹)</th>
+        </tr>
+      </thead>
+      <tbody>
+         {% for member, total in fl %}
+    <tr>
+      <td>{{ forloop.counter }}</td>
+      <td>{{ member.name }}</td>
+      <td>{{ total }}</td>
+    </tr>
+    {% endfor %}
+      </tbody>
+      <tfoot>
+        <tr>
+          <td></td>
+          <td>Total (Family)</td>
+          <td>{{fs}}</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <footer>
+    <p>© 2025 Roz Ka Hisab — Family Expense Tracker</p>
+    <p>Made by Poonam</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Roz Ka Hisab</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9ff;
+    }
+    header {
+      background: linear-gradient(to right, #6a11cb, #ff66b2);
+      color: white;
+      padding: 15px 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 20px;
+    }
+    nav {
+      float: right;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #6a11cb;
+    }
+    ul {
+      margin-top: 10px;
+    }
+    footer {
+      text-align: center;
+      background: linear-gradient(to right, #6a11cb, #ff66b2);
+      color: white;
+      padding: 10px;
+      margin-top: 40px;
+      position: relative;
+      bottom: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Roz Ka Hisab</h1>
+    <nav>
+      <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'about' %}">About</a>
+                <a href="{% url 'dashboard' %}">Dashboard</a>
+
+      
+    </nav>
+    <div style="clear:both;"></div>
+  </header>
+
+  <div class="container">
+    <h2>About Roz Ka Hisab</h2>
+    <p>
+      <b>Roz Ka Hisab</b> is a simple family expense tracker that helps you record and manage daily expenses. 
+      It allows you to categorize spending like Food, Travel, Shopping and more, 
+      so you can clearly see where your money goes each month.
+    </p>
+    <p>
+      The goal is to make managing expenses easy for families by providing quick summaries, 
+      monthly totals, and a clear dashboard to stay on top of finances.
+    </p>
+    <h3>Key Features:</h3>
+    <ul>
+      <li>Track daily expenses in categories</li>
+      <li>View monthly summaries at a glance</li>
+      <li>Simple, clean and easy to use</li>
+      <li>Helps families stay organized with money</li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>© 2025 Roz Ka Hisab — Family Expense Tracker</p>
+    <p>Made by Poonam</p>
+  </footer>
+
+</body>
+</html>

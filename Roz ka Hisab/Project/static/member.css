@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap');
+body
+{
+    padding: 0;
+    margin: 0;
+}
+
+.container
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    height:800px;
+    padding: 0;
+    gap:20px;
+}
+.nav
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   border: 0.5px solid plum;
+   width:100% ;
+   height: 100px;
+
+   background: linear-gradient(315deg,rgb(224, 153, 224),rgb(85, 138, 244));
+   font-family: Poppins;
+   font-size: 20px;
+   font-weight: 500;
+}
+
+.nav ul
+{
+    display: flex;
+    align-items: center;
+     list-style: none;
+     gap:20px;
+    cursor: pointer;
+}
+
+.nav li:hover
+{
+    background-color: rgba(240, 255, 255, 0.455);
+}
+
+
+.main
+{
+   
+   border: 0.5px solid plum;
+   width:900px ;
+   height: 500px;
+   padding: 20px;
+   font-family: Poppins;
+   font-size: 20px;
+   font-weight: 500;
+    border-radius: 15px;
+    box-shadow: 1px 0px 13px rgba(105, 90, 205, 0.408);
+}
+
+.t3
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Poppins;
+   font-size: 30px;
+   font-weight: 500;
+   color: rgb(161, 106, 198);
+   margin-top: 20px;
+}
+.t2
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Poppins;
+   font-size: 30px;
+   font-weight: 500;
+   color: rgb(82, 78, 78);
+   margin-top: 20px;
+
+}
+
+.top
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:20px;
+}
+
+.d1 input
+{
+     width: 200px;
+    height: 30px;
+    font-size: 20px;
+}
+
+.d1 select
+{
+     width: 200px;
+    height: 30px;
+    font-size: 20px;
+
+}
+
+.d1
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap:40px;
+}
+
+.d2
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap:150px;
+    margin-left: 20px;
+}
+
+#t1,#t2
+{
+    width: 200px;
+    height: 30px;
+    font-size: 20px;
+}
+#t1
+{
+   position: relative;
+   left: 60px;
+}
+
+
+
+.d3
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 100px;
+    gap:20px;
+    
+}
+
+.d3 textarea
+{
+    width: 500px;
+    height: 100px;
+    resize: none;
+    font-size: 25px;
+}
+
+
+.btn
+{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 40px;
+    background-color: rgb(173, 112, 230);
+    border: 0;
+    border-radius: 5px;
+    font-size: large;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.btn:hover
+{
+    background-color: rgba(173, 112, 230, 0.595);
+
+}
+
+.main2
+{
+ border: 0.5px solid plum;
+ padding: 20px;
+   width:900px ;
+   height: 500px;
+   font-family: Poppins;
+   font-size: 20px;
+   font-weight: 500;
+    border-radius: 15px;
+    box-shadow: 1px 0px 13px rgba(105, 90, 205, 0.408);
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+
+}
+
+#l2
+{
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+    color: blueviolet;
+    font-weight: 600;
+}
+
+.card
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  width: 900px;
+  border:1px solid plum;
+  border-radius: 10px;
+}
+
+
+.cp1,.cp2
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+
+.c5
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.btn2
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 25px;
+    background-color: rgb(173, 112, 230);
+    border: 0;
+    border-radius: 5px;
+    font-size: large;
+    font-weight: 400;
+    cursor: pointer;
+    margin-left: 40px;
+}
+
+.mb
+{
+    display: flex;
+    gap:400px;
+    
+}
+
+.mcard
+{
+    overflow-y:auto;
+}

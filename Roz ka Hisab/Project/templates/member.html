@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member|{{data.member.name}}</title>
+    <link rel="stylesheet" href="{% static 'member.css' %}">
+    <style>
+        a{text-decoration: none;
+        color: inherit;}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <div class="t1">Roz Ka Hisab — Family Expense Tracker</div>
+            <ul>
+               <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'about' %}">About</a>
+                <a href="{% url 'dashboard' %}">Dashboard</a>
+
+            </ul>
+        </div>
+
+        <div class="main">
+
+
+            <div class="c2">
+                <div class="t2">Welcome {{data.member.name}}</div>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="top">
+                        <div class="t3">Add Expense</div>
+                        <div class="d1">
+                            <div>
+                                <label class="l1">Amount(₹)</label>
+                                <input type="text" name="amount">
+                            </div>
+
+                            <div>
+                                <label class="l1">Category</label>
+                                <select name="category">
+                                    <option>Food</option>
+                                    <option>Travel</option>
+                                    <option>Shopping</option>
+                                    <option>Bill</option>
+                                    <option>Toys</option>
+                                    <option>Medicine</option>
+                                    <option>Fees</option>
+
+
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="d2">
+                            <div>
+                                <label class="l1">Date</label>
+                                <input id="t1" type="date" name="date" >
+                            </div>
+                            <div>
+                            <label class="l1">Time</label>
+                            <input  id="t2" type="time" name="time">
+                            </div>
+                        </div>
+
+                        <div class="d3">
+                          
+                            <label class="l1">Note</label><br />
+                            <textarea name="note"></textarea>
+
+                        </div>
+                        <button class="btn">Add</button>
+                    </div>
+                    
+                </form>
+                <div class="bottom"></div>
+            </div>
+
+
+            
+        </div>
+
+        <div class="main2">
+            <div class="mb">
+            <label id="l2">Your Expenses (This Month)</label>
+            {% if data.member %}
+            <a class="btn" href="{% url 'account' aname=data.member.name %}" 
+            style="text-decoration: none; color: inherit;">Submit</a>
+            {% endif %}
+
+            </div>
+
+            <div class="mcard">
+            {% for i in data.memberexpense%}
+            <div class="c5">
+                
+                <div class="card">
+                    <div class="cp1">
+                    <div class="p1">{{i.date}} • {{i.time}}</div>
+                    <div class="p2">₹{{i.amount}}</div>
+                    </div>
+
+                    <div class="cp2">
+                    <div class="p3">{{i.category}}</div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            </div>
+        </div>
+
+        
+
+    </div>
+</body>
+
+</html>
