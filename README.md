@@ -23,3 +23,30 @@ Frontend: HTML, CSS, JavaScript (Django Templates)
 Database: SQLite (default)
 
 📸 Screenshots
+## 📸 Screenshots  
+
+### 🏠 Home  
+![Home Page](imgs/1.png)  
+
+---
+
+### 👥 Member  
+![Member Page](imgs/2.png)
+![Member Page](imgs/3.png)  
+
+
+---
+
+### 💰 Account  
+![Account Page](imgs/4.png)  
+
+---
+
+### 📊 Dashboard  
+![Dashboard Page](imgs/6.png)  
+
+---
+
+### ℹ️ About  
+![About Page](imgs/5.png)  
+
